@@ -72,7 +72,7 @@ open class SideMenuManager : NSObject {
      
      Note that each menu's width can be overridden using the `menuWidth` property on any `UISideMenuNavigationController` instance.
      */
-    open static var menuWidth: CGFloat = min(round(min((appScreenRect.width), (appScreenRect.height)) * 0.75), 240)
+    @objc open static var menuWidth: CGFloat = min(round(min((appScreenRect.width), (appScreenRect.height)) * 0.75), 240)
     
     /// Duration of the animation when the menu is presented without gestures. Default is 0.35 seconds.
     open static var menuAnimationPresentDuration: Double = 0.35
@@ -90,7 +90,7 @@ open class SideMenuManager : NSObject {
     open static var menuAnimationTransformScaleFactor: CGFloat = 1
     
     /// The background color behind menu animations. Depending on the animation settings this may not be visible. If `menuFadeStatusBar` is true, this color is used to fade it. Default is black.
-    open static var menuAnimationBackgroundColor: UIColor?
+    @objc open static var menuAnimationBackgroundColor: UIColor?
     
     /// The shadow opacity around the menu view controller or existing view controller depending on the `menuPresentMode`. Default is 0.5 for 50% opacity.
     open static var menuShadowOpacity: Float = 0.5
@@ -108,7 +108,7 @@ open class SideMenuManager : NSObject {
     open static var menuParallaxStrength: Int = 0
     
     /// Draws the `menuAnimationBackgroundColor` behind the status bar. Default is true.
-    open static var menuFadeStatusBar = true
+    @objc open static var menuFadeStatusBar = true
     
     /// The animation options when a menu is displayed. Ignored when displayed with a gesture.
     open static var menuAnimationOptions: UIViewAnimationOptions = .curveEaseInOut
